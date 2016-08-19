@@ -10,6 +10,10 @@ public class Population {
 
     private ArrayList<Route> routes = new ArrayList<Route>(GeneticAlgorithm.POPULATION_SIZE);
 
+    public Population(int populationSize, GeneticAlgorithm geneticAlgorithm) {
+        IntStream.range(0, populationSize).forEach(x -> routes.add(new Route(geneticAlgorithm.getInitialRoute())));
+    }
+
     public Population(int populationSize, ArrayList<City> cities) {
         IntStream.range(0, populationSize).forEach(x -> routes.add(new Route(cities)));
     }

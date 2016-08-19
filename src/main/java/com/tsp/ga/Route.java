@@ -14,6 +14,14 @@ public class Route {
     private double fitness = 0;
     private ArrayList<City> cities = new ArrayList<City>();
 
+
+    public Route(GeneticAlgorithm geneticAlgorithm) {
+
+        geneticAlgorithm.getInitialRoute().forEach(x -> cities.add(null));
+
+    }
+
+
     public Route(ArrayList<City> cities) {
         this.cities.addAll(cities);
         Collections.shuffle(this.cities);
