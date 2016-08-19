@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TSP_genetic_algorithm.iml" filepath="$PROJECT_DIR$/.idea/modules/TSP_genetic_algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TSP_genetic_algorithm_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TSP_genetic_algorithm_main.iml" group="TSP_genetic_algorithm" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TSP_genetic_algorithm_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TSP_genetic_algorithm_test.iml" group="TSP_genetic_algorithm" />
+    </modules>
+  </component>
+</project>
