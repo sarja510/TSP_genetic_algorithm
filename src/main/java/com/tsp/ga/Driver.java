@@ -5,6 +5,6 @@ package com.tsp.ga;
  */
 public class Driver {
     public static void main(String[] args) {
-        
+
     }
 }
