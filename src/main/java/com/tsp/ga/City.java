@@ -13,11 +13,13 @@ public class City {
     private double latitude;
     private String name;
 
-    public City(double longitude, double latitude, String name) {
+    public City(String name, double longitude, double latitude) {
+        this.name = name;
         this.longitude = longitude * CONVERT_DEGREE_TO_RADIANS;
         this.latitude = latitude * CONVERT_DEGREE_TO_RADIANS;
-        this.name = name;
+
     }
+
 
     public String getName() {
         return this.name;
