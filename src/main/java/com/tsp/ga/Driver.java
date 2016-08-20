@@ -28,7 +28,21 @@ public class Driver {
 
     public static void main(String[] args) {
 
+        Driver driver = new Driver();
+        Population population = new Population(GeneticAlgorithm.POPULATION_SIZE, driver.initialRoute);
+        population.sortRoutesByFitness();
+        driver.printPopulaiton(population);
 
 
+    }
+
+
+    public  void printPopulaiton(Population population){
+        population.getRoutes().forEach(x -> {
+
+            System.out.println(Arrays.toString(x.getCities().toArray()) + " | " +
+            String.format("%.4f", x.getFitness()) +" | "+ String.format("%.2f", x.calculateTotalDistance()));
+        });
+        System.out.println("");
     }
 }
