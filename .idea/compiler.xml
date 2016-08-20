@@ -9,9 +9,9 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="TSP_genetic_algorithm_main" target="1.5" />
-      <module name="TSP_genetic_algorithm_test" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="TSP_genetic_algorithm_main" target="1.8" />
+      <module name="TSP_genetic_algorithm_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

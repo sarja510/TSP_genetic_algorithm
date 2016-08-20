@@ -45,4 +45,24 @@ public class Driver {
         });
         System.out.println("");
     }
+
+
+    public void printHeading(int generationNumber){
+        System.out.println("> Generation # "+ generationNumber);
+        String headingCoulmn1 = "Route";
+        String remainingHeadingColumns = "Fitness | Distance (in miles)";
+        int cityNamesLength = 0;
+        for (int x = 0; x < initialRoute.size(); x++) cityNamesLength += initialRoute.get(x).getName().length();
+        int arrayLength = cityNamesLength + initialRoute.size()*2;
+        int partialLength = (arrayLength - headingCoulmn1.length())/2;
+        for (int x=0; x < partialLength; x++)System.out.print(" ");
+        System.out.print(headingCoulmn1);
+        for (int x=0; x < partialLength; x++)System.out.print(" ");
+        if ((arrayLength % 2) == 0)System.out.print(" ");
+        System.out.println(" | "+ remainingHeadingColumns);
+        cityNamesLength += remainingHeadingColumns.length() +3;
+        for (int x=0; x < cityNamesLength+initialRoute.size()*2; x++)System.out.print("-");
+        System.out.println("");
+
+    }
 }
