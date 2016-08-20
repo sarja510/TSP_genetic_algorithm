@@ -31,8 +31,20 @@ public class Driver {
         Driver driver = new Driver();
         Population population = new Population(GeneticAlgorithm.POPULATION_SIZE, driver.initialRoute);
         population.sortRoutesByFitness();
+        GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(driver.initialRoute);
+        int generationNumber = 0;
+        driver.printHeading(generationNumber++);
         driver.printPopulaiton(population);
+        while (generationNumber < geneticAlgorithm.NUMB_OF_GENERATIONS){
 
+            driver.printHeading(generationNumber++);
+            population = geneticAlgorithm.evolve(population);
+            population.sortRoutesByFitness();
+            driver.printPopulaiton(population);
+        }
+
+        System.out.println("Best Route Found so far: " + population.getRoutes().get(0));
+        System.out.println("w/ a distance of: "+String.format("%.2f", population.getRoutes().get(0).calculateTotalDistance())+ " miles");
 
     }
 

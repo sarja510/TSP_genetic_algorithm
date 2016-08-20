@@ -36,7 +36,7 @@ public class Route {
 
     public double getFitness(){
         if(isFitneesChanged == true) {
-            fitness = (1/calculateTotalDistance()) * 1000;
+            fitness = (1/calculateTotalDistance()) * 10000;
             isFitneesChanged = false;
         }
         return fitness;
