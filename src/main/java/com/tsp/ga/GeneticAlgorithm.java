@@ -62,7 +62,22 @@ public class GeneticAlgorithm {
 
     Route crossoverRoute(Route route1, Route route2){
 
-        return null;
+        Route crossoverRoute = new Route(this);
+        Route tempRoute1 = route1;
+        Route tempRoute2 = route2;
+
+        if (Math.random() < 0.5) {
+
+            tempRoute1 = route2;
+            tempRoute2 = route1;
+        }
+
+        for (int x = 0; x < crossoverRoute.getCities().size()/2; x++)   // this will create the intermidiate_crossover_route
+            crossoverRoute.getCities().set(x, tempRoute1.getCities().get(x));
+
+
+
+        return fillNullsInCrossoverRoute(crossoverRoute, tempRoute2);
 
     }
 
